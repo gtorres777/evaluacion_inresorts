@@ -12,7 +12,7 @@ export const UserPayments = ( props: any ) => {
     let history: any = useHistory();
 
     const handleHome = () => {
-        history.back()
+        history.push('/')
     }
 
     const renderUserPayments = ({idPayment,quoteDescription,payDate,paymentVouchers}:Payment) => {
@@ -67,7 +67,7 @@ export const UserPayments = ( props: any ) => {
                     userPayments.map( payment => renderUserPayments(payment))
                 }
                 <div className="d-grid gap-2 col-6 mx-auto">
-                    <button className="btn btn-success col-6" onClick={ () => handleHome }>
+                    <button className="btn btn-success col-6" onClick={ handleHome }>
                             Volver a la Lista de Usuarios
                     </button>
                 </div>
